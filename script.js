@@ -7,6 +7,14 @@ function computerPlay() {
     return(computerSelection);
 }
 
+//consider removing the confirm window. The win() and loss() functions seem to execute before the DOM is manipulated 
+//to also show the final score. This gives inconsistent behaviour across browsers.
+//Only Firefox first displays score in div 'results'. Chrome and Safari go straight to the confirm window.
+//confirm (and alert etc) All these methods are modal: they pause script execution and don’t allow the visitor to interact 
+//with the rest of the page until the window has been dismissed.
+
+//adding another game is not part of the exercise so this hassle isn't needed, I made it a feature for the future fancy UI
+
 function win(computerSelection, playerSelection) {
 
     if (confirm("You win " + playerScore + " to " + computerScore + " by absolutely smashing R2's " + computerSelection + " with your " + playerSelection + ". Do you dare play again?")) {
