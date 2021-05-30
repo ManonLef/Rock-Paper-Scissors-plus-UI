@@ -1,6 +1,7 @@
 let playerScore = 0;  
 let computerScore = 0;
 let rounds = 1;
+let playerSelection;
 
 function computerPlay() {
     let compChoice = ["rock", "paper", "scissors"]; // note to self: mind the brackets [] for math
@@ -15,7 +16,7 @@ function game() {
 
 function playRound(playerSelection, computerSelection) {
 
-    computerSelection = "rock";
+    
     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
     
         rounds ++
@@ -41,8 +42,11 @@ function playRound(playerSelection, computerSelection) {
         } else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore++;
             console.log("You win! you cut R2's pathetic little piece of paper into world's most tiny violin and threw it back. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
-        } 
-    } 
+        }
+        
+    } else {
+            console.log("you can only throw a rock, paper or scissors at this time.");
+    }
 }
 
 function endGame() {
@@ -53,9 +57,15 @@ function endGame() {
     }
 }
 
-document.getElementById("rock").addEventListener("click", playRound("rock",));
-document.getElementById("paper").addEventListener("click", playRound("paper",));
-document.getElementById("scissors").addEventListener("click", playRound("scissors",));
+document.getElementById("rock").addEventListener("click", () => {
+    playRound("rock",);
+});
+document.getElementById("paper").addEventListener("click", () => {
+    playRound("paper",);
+});
+document.getElementById("scissors").addEventListener("click", () => {
+    playRound("scissors",);
+});
 
 
 //window.alert("Open your console and refresh if you want to play a few rounds of Rock, Paper Scissors against an astromech droid. (hit cancel on the first round before you refresh)");
