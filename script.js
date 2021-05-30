@@ -55,8 +55,10 @@ function endGame() {
     }
 }
 
-window.alert("Open your console and refresh if you want to play a few rounds of Rock, Paper Scissors against an astromech droid. (hit cancel on the first round before you refresh)");
-loopGame();
+window.addEventListener('keydown', playRound);
+
+//window.alert("Open your console and refresh if you want to play a few rounds of Rock, Paper Scissors against an astromech droid. (hit cancel on the first round before you refresh)");
+//loopGame();
 
 //function loopGame() {
 //    do {
