@@ -10,41 +10,39 @@ function computerPlay() {
 
 function game() {
     let computerSelection = computerPlay();
-    let playerSelection = prompt("What will you throw at R2-D2? Just type: rock, paper or scissors");
     console.log(playRound(playerSelection, computerSelection));
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toLowerCase() === "rock" || playerSelection.toLowerCase() === "paper" || playerSelection.toLowerCase() === "scissors") {
+
+    computerSelection = "rock";
+    if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
     
         rounds ++
 
-        if (playerSelection.toLowerCase() === computerSelection) { 
+        if (playerSelection === computerSelection) { 
             computerScore++;
-            return("your objects collided mid-air, it's a tie. " + playerScore + " for you and " + computerScore + " for R2-D2.");   
-        } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
+            console.log("your objects collided mid-air, it's a tie. " + playerScore + " for you and " + computerScore + " for R2-D2.");   
+        } else if (playerSelection === "rock" && computerSelection === "paper") {
             computerScore++;
-            return("You lose! R2-D2 had some rock-eating paper apparently. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
-        } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
+            console.log("You lose! R2-D2 had some rock-eating paper apparently. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+        } else if (playerSelection === "rock" && computerSelection === "scissors") {
             playerScore++;
-            return("You win! Those scissors stood no chance against your mighty rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
-        } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
+            console.log("You win! Those scissors stood no chance against your mighty rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+        } else if (playerSelection === "paper" && computerSelection === "rock") {
             playerScore++;
-            return("You win! This paper must have come from Uranus, it entirely blocked R2-D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
-        } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
+            console.log("You win! This paper must have come from Uranus, it entirely blocked R2-D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+        } else if (playerSelection === "paper" && computerSelection === "scissors") {
             computerScore++;
-            return("R2-D2 whips out his Swiss army knife and cuts your paper to pieces. Obvious loss. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
-        } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
+            console.log("R2-D2 whips out his Swiss army knife and cuts your paper to pieces. Obvious loss. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+        } else if (playerSelection === "scissors" && computerSelection === "rock") {
             computerScore++;
-            return("You lose! Those blades got pretty roughed up by R2D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
-        } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
+            console.log("You lose! Those blades got pretty roughed up by R2D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+        } else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore++;
-            return("You win! you cut R2's pathetic little piece of paper into world's most tiny violin and threw it back. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
-        }
-        
-    } else {
-            return("you can only throw a rock, paper or scissors at this time.");
-    }
+            console.log("You win! you cut R2's pathetic little piece of paper into world's most tiny violin and threw it back. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+        } 
+    } 
 }
 
 function endGame() {
@@ -55,7 +53,10 @@ function endGame() {
     }
 }
 
-window.addEventListener('keydown', playRound);
+document.getElementById("rock").addEventListener("click", playRound("rock",));
+document.getElementById("paper").addEventListener("click", playRound("paper",));
+document.getElementById("scissors").addEventListener("click", playRound("scissors",));
+
 
 //window.alert("Open your console and refresh if you want to play a few rounds of Rock, Paper Scissors against an astromech droid. (hit cancel on the first round before you refresh)");
 //loopGame();
