@@ -71,7 +71,7 @@ function playRound(playerSelection, computerSelection) {
                 document.getElementById("results").innerHTML = "R2-D2 whips out his Swiss army knife and cuts your paper to pieces. Obvious loss. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
             } else {
                 document.getElementById("results").innerHTML = "You lose. The final score is " + playerScore + " for you and " + computerScore + " for R2-D2!";
-                loss();
+                loss(playerSelection, computerSelection);
             }
         } else if (playerSelection === "scissors" && computerSelection === "rock") {
             computerScore++;
@@ -79,7 +79,7 @@ function playRound(playerSelection, computerSelection) {
                 document.getElementById("results").innerHTML = "You lose! Those blades got pretty roughed up by R2D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
             } else {
                 document.getElementById("results").innerHTML = "You lose. The final score is " + playerScore + " for you and " + computerScore + " for R2-D2!";
-                loss();
+                loss(playerSelection, computerSelection);
             }   
         } else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore++;
@@ -87,7 +87,7 @@ function playRound(playerSelection, computerSelection) {
                 document.getElementById("results").innerHTML = "You win! you cut R2's pathetic little piece of paper into world's most tiny violin and threw it back. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
             } else {
                 document.getElementById("results").innerHTML = "You win! The final score is " + playerScore + " for you and " + computerScore + " for R2-D2!";
-                win();
+                win(playerSelection, computerSelection);
             }   
         }  
     } 
