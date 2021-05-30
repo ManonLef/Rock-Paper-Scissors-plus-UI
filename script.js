@@ -9,14 +9,10 @@ function computerPlay() {
     return(computerSelection);
 }
 
-function game() {
-    let computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-}
-
 function playRound(playerSelection, computerSelection) {
 
-    computerSelection = "rock";
+    computerSelection = computerPlay();
+    
     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
     
         rounds ++
