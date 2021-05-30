@@ -55,16 +55,16 @@ function endGame() {
     }
 }
 
-function loopGame() {
-    do {
-        console.log(" Get ready for Round " + rounds);
-        game();
-    }
-    while (rounds < 6);
-
-    const score = endGame();
-    console.log(score);
-}
+//function loopGame() {
+//    do {
+//        console.log(" Get ready for Round " + rounds);
+//        game();
+//    }
+//    while (rounds < 6);
+//
+//    const score = endGame();
+//    console.log(score);
+//}
 
 window.alert("Open your console and refresh if you want to play a few rounds of Rock, Paper Scissors against an astromech droid. (hit cancel on the first round before you refresh)");
 loopGame();
