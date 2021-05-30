@@ -16,37 +16,34 @@ function game() {
 
 function playRound(playerSelection, computerSelection) {
 
-    
+    computerSelection = "rock";
     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
     
         rounds ++
 
         if (playerSelection === computerSelection) { 
             computerScore++;
-            console.log("your objects collided mid-air, it's a tie. " + playerScore + " for you and " + computerScore + " for R2-D2.");   
+            document.getElementById("results").innerHTML = "your objects collided mid-air, it's a tie. " + playerScore + " for you and " + computerScore + " for R2-D2.";   
         } else if (playerSelection === "rock" && computerSelection === "paper") {
             computerScore++;
-            console.log("You lose! R2-D2 had some rock-eating paper apparently. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+            document.getElementById("results").innerHTML = "You lose! R2-D2 had some rock-eating paper apparently. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
         } else if (playerSelection === "rock" && computerSelection === "scissors") {
             playerScore++;
-            console.log("You win! Those scissors stood no chance against your mighty rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+            document.getElementById("results").innerHTML = "You win! Those scissors stood no chance against your mighty rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
         } else if (playerSelection === "paper" && computerSelection === "rock") {
             playerScore++;
-            console.log("You win! This paper must have come from Uranus, it entirely blocked R2-D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+            document.getElementById("results").innerHTML = "You win! This paper must have come from Uranus, it entirely blocked R2-D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
         } else if (playerSelection === "paper" && computerSelection === "scissors") {
             computerScore++;
-            console.log("R2-D2 whips out his Swiss army knife and cuts your paper to pieces. Obvious loss. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+            document.getElementById("results").innerHTML = "R2-D2 whips out his Swiss army knife and cuts your paper to pieces. Obvious loss. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
         } else if (playerSelection === "scissors" && computerSelection === "rock") {
             computerScore++;
-            console.log("You lose! Those blades got pretty roughed up by R2D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
+            document.getElementById("results").innerHTML = "You lose! Those blades got pretty roughed up by R2D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
         } else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore++;
-            console.log("You win! you cut R2's pathetic little piece of paper into world's most tiny violin and threw it back. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.");
-        }
-        
-    } else {
-            console.log("you can only throw a rock, paper or scissors at this time.");
-    }
+            document.getElementById("results").innerHTML = "You win! you cut R2's pathetic little piece of paper into world's most tiny violin and threw it back. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
+        }  
+    } 
 }
 
 function endGame() {
