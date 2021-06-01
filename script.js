@@ -7,6 +7,9 @@ function computerPlay() {
     return(computerSelection);
 }
 
+// change innerHTML to innerText for security reasons!!!!
+
+
 //consider removing the confirm window. The win() and loss() functions seem to execute before the DOM is manipulated 
 //to also show the final score. This gives inconsistent behaviour across browsers.
 //Only Firefox first displays score in div 'results'. Chrome and Safari go straight to the confirm window.
