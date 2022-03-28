@@ -73,12 +73,6 @@ function checkWin(computerSelection,playerSelection) {
 
 function playRound(playerSelection) {
 
-    /*
-    if(roundsPlayed !< 5) {
-        checkWin("mouse button","finger");
-    }
-    */
-
     computerSelection = computerPlay();
 
     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
