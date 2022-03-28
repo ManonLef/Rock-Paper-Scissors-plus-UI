@@ -88,49 +88,49 @@ function playRound(playerSelection) {
             roundsPlayed++   
         } else if (playerSelection === "rock" && computerSelection === "paper") {
             computerScore++;
+            roundsPlayed++;
             if (roundsPlayed < 5) {
                 document.getElementById("results").innerHTML = "You lose! R2-D2 had some rock-eating paper apparently. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
-                roundsPlayed++  
             } else {
                 checkWin(computerSelection,playerSelection);
             }
         } else if (playerSelection === "rock" && computerSelection === "scissors") {
-            playerScore++;         
+            playerScore++;
+            roundsPlayed++;         
             if (roundsPlayed < 5) {
                 document.getElementById("results").innerHTML = "You win! Those scissors stood no chance against your mighty rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
-                roundsPlayed++
             } else {
                 checkWin(computerSelection,playerSelection);
             }
         } else if (playerSelection === "paper" && computerSelection === "rock") {
             playerScore++;
+            roundsPlayed++;
             if (roundsPlayed < 5) {
                 document.getElementById("results").innerHTML = "You win! This paper must have come from Uranus, it entirely blocked R2-D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
-                roundsPlayed++
             } else {
                 checkWin(computerSelection,playerSelection);
             }   
         } else if (playerSelection === "paper" && computerSelection === "scissors") {
             computerScore++;
+            roundsPlayed++;
             if (roundsPlayed < 5) {
                 document.getElementById("results").innerHTML = "R2-D2 whips out his Swiss army knife and cuts your paper to pieces. Obvious loss. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
-                roundsPlayed++
             } else {
                 checkWin(computerSelection,playerSelection);
             }
         } else if (playerSelection === "scissors" && computerSelection === "rock") {
             computerScore++;
+            roundsPlayed++;
             if (roundsPlayed < 5) {
                 document.getElementById("results").innerHTML = "You lose! Those blades got pretty roughed up by R2D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
-                roundsPlayed++
             } else {
                 checkWin(computerSelection,playerSelection);
             }   
         } else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore++;
+            roundsPlayed++;
             if (roundsPlayed < 5) {
                 document.getElementById("results").innerHTML = "You win! you cut R2's pathetic little piece of paper into world's most tiny violin and threw it back. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
-                roundsPlayed++
             } else {
                 checkWin(computerSelection,playerSelection);
             }   
