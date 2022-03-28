@@ -67,7 +67,7 @@ function checkWin(computerSelection,playerSelection) {
     } else if (playerScore > computerScore) {
         win(computerSelection,playerSelection)
     } else if (playerScore < computerScore) {
-        lose (playerSelection, computerSelection)
+        loss(playerSelection, computerSelection)
     }
 }
 
