@@ -1,5 +1,6 @@
 let playerScore = 0;  
 let computerScore = 0;
+let roundsPlayed = 0;
 
 function computerPlay() {
     let compChoice = ["rock", "paper", "scissors"]; 
@@ -23,6 +24,7 @@ function win(computerSelection, playerSelection) {
     if (confirm("You win " + playerScore + " to " + computerScore + " by absolutely smashing R2's " + computerSelection + " with your " + playerSelection + ". Do you dare play again?")) {
         playerScore = 0;  
         computerScore = 0;
+        roundsPlayed = 0;
         document.getElementById("results").innerHTML = "pick a weapon"
     } else {
         let elem = document.getElementById("buttons");
@@ -36,6 +38,7 @@ function loss(computerSelection, playerSelection) {
     if (confirm("You lose " + playerScore + " to " + computerScore + ". R2's " + computerSelection + " completely pulverized your pathetic puny " + playerSelection + ". Do you dare play again?")) {
         playerScore = 0;  
         computerScore = 0;
+        roundsPlayed = 0;
         document.getElementById("results").innerHTML = "pick a weapon"
     } else {
         let elem = document.getElementById("buttons");
@@ -47,6 +50,9 @@ function loss(computerSelection, playerSelection) {
 function playRound(playerSelection) {
 
     computerSelection = computerPlay();
+
+    // Debugging
+    // alert("Player choice: " + playerSelection + "\n" + "Computer choice: " + computerSelection);
     
     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
 
