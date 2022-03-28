@@ -85,7 +85,10 @@ function playRound(playerSelection) {
 
         if (playerSelection === computerSelection) { 
             document.getElementById("results").innerHTML = "you both picked " + playerSelection + ", it's a tie. " + playerScore + " for you and " + computerScore + " for R2-D2.";
-            roundsPlayed++   
+            roundsPlayed++;
+            if(roundsPlayed > 4) { // A game has to end after the 5th game is a tie, too.
+                checkWin(computerSelection, playerSelection)
+            }
         } else if (playerSelection === "rock" && computerSelection === "paper") {
             computerScore++;
             roundsPlayed++;
