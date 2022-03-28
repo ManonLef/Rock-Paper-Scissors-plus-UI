@@ -44,7 +44,7 @@ function loss(computerSelection, playerSelection) {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
 
     computerSelection = computerPlay();
     
