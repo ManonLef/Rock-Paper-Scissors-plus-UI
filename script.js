@@ -102,6 +102,7 @@ function playRound(playerSelection) {
             roundsPlayed++
             if (roundsPlayed !== 5) {
                 document.getElementById("results").innerHTML = "You win! This paper must have come from Uranus, it entirely blocked R2-D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
+                roundsPlayed++
             } else {
                 checkWin(computerSelection,playerSelection);
             }   
@@ -110,6 +111,7 @@ function playRound(playerSelection) {
             roundsPlayed++
             if (roundsPlayed !== 5) {
                 document.getElementById("results").innerHTML = "R2-D2 whips out his Swiss army knife and cuts your paper to pieces. Obvious loss. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
+                roundsPlayed++
             } else {
                 checkWin(computerSelection,playerSelection);
             }
@@ -118,6 +120,7 @@ function playRound(playerSelection) {
             roundsPlayed++
             if (roundsPlayed !== 5) {
                 document.getElementById("results").innerHTML = "You lose! Those blades got pretty roughed up by R2D2's rock. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
+                roundsPlayed++
             } else {
                 checkWin(computerSelection,playerSelection);
             }   
