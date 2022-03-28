@@ -73,6 +73,12 @@ function checkWin(computerSelection,playerSelection) {
 
 function playRound(playerSelection) {
 
+    /*
+    if(roundsPlayed !< 5) {
+        checkWin("mouse button","finger");
+    }
+    */
+
     computerSelection = computerPlay();
 
     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
@@ -84,6 +90,7 @@ function playRound(playerSelection) {
             computerScore++;
             if (roundsPlayed < 5) {
                 document.getElementById("results").innerHTML = "You lose! R2-D2 had some rock-eating paper apparently. The score is now " + playerScore + " for you and " + computerScore + " for R2-D2.";
+                roundsPlayed++  
             } else {
                 checkWin(computerSelection,playerSelection);
             }
