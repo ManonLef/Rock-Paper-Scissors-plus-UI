@@ -49,7 +49,7 @@ function loss(computerSelection, playerSelection) {
 
 function tie() {
 
-    if (confirm("You tied! How the hell is that even possible?\nWanna play another game?")) {
+    if (confirm("You tied! How in Darth's name is that even possible?\nWanna play another game?")) {
         playerScore = 0;  
         computerScore = 0;
         roundsPlayed = 0;
